@@ -88,10 +88,7 @@ export function ScheduleSection() {
               className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-card border border-border"
             >
               {/* Day Header */}
-              <div className={`bg-gradient-to-r ${day.color} p-6 text-white`}>
-                <div className="text-5xl font-black opacity-30 absolute -top-2 -right-2">
-                  {day.day}
-                </div>
+              <div className={`bg-gradient-to-r ${day.color} p-6 text-white relative`}>
                 <p className="text-white/80 text-sm font-medium">Day {day.day}</p>
                 <p className="font-bold">{day.date}</p>
                 <h3 className="text-lg font-bold mt-2">{day.title}</h3>
