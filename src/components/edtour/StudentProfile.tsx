@@ -2,8 +2,7 @@
 
 import { MapPin, BookOpen, Quote } from 'lucide-react'
 import { Card } from '@/components/ui/card'
-import { ImageWithFallback } from '@/components/figma/ImageWithFallback'
-import pic from '@/assets/mac.jpg'
+import profilePic from '@/assets/mac.jpg'
 
 export function StudentProfile() {
   return (
@@ -25,8 +24,8 @@ export function StudentProfile() {
                 {/* Main image container */}
                 <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-1">
                   <div className="bg-white rounded-3xl aspect-square flex items-center justify-center overflow-hidden">
-                    <ImageWithFallback 
-                      src={pic}
+                    <img
+                      src={profilePic}
                       alt="Mheil Andrei N. Cenita"
                       className="w-full h-full object-cover"
                     />
