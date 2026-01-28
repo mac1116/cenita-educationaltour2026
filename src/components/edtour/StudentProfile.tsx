@@ -2,96 +2,85 @@
 
 import { GraduationCap, MapPin, BookOpen, Quote } from 'lucide-react'
 import { Card } from '@/components/ui/card'
-import { motion } from 'framer-motion'
 
 export function StudentProfile() {
   return (
-    <section className="py-28 bg-black relative overflow-hidden">
-      {/* Subtle pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]" />
+    <section className="py-24 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative">
         <div className="max-w-5xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Profile Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative order-2 lg:order-1"
-            >
-              <div className="aspect-square max-w-sm mx-auto relative">
-                {/* Decorative frame */}
-                <div className="absolute -inset-4 border-2 border-white/20 rounded-3xl" />
-                <div className="absolute -inset-8 border border-white/10 rounded-3xl" />
+            <div className="relative">
+              <div className="aspect-square max-w-md mx-auto relative">
+                {/* Decorative rings */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl rotate-6 opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl -rotate-3 opacity-20" />
                 
                 {/* Main image container */}
-                <div className="relative bg-white/10 backdrop-blur rounded-2xl aspect-square flex items-center justify-center overflow-hidden">
-                  {/* Replace this with actual photo */}
-                  <div className="text-center p-8">
-                    <div className="w-40 h-40 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center border-2 border-white/20">
-                      <GraduationCap className="w-20 h-20 text-white/50" />
+                <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-1">
+                  <div className="bg-muted rounded-3xl aspect-square flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+                        <GraduationCap className="w-16 h-16 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-foreground">Mheil Andrei N. Cenita</h3>
+                      <p className="text-muted-foreground">3rd Year - BS Computer Science</p>
                     </div>
-                    <h3 className="text-2xl font-bold text-white">Mheil Andrei N. Cenita</h3>
-                    <p className="text-white/50 mt-2">3rd Year • BS Computer Science</p>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Profile Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="order-1 lg:order-2"
-            >
-              <span className="inline-block text-xs font-semibold text-white/50 tracking-[0.2em] uppercase mb-4">
+            <div>
+              <span className="inline-block text-sm font-semibold text-purple-500 bg-purple-500/10 px-4 py-2 rounded-full mb-4">
                 Meet the Student
               </span>
               
-              <h2 className="text-4xl lg:text-5xl font-black text-white mb-8 tracking-tight">
+              <h2 className="text-4xl font-black text-foreground mb-6">
                 About Me
               </h2>
 
               {/* Info cards */}
               <div className="space-y-4 mb-8">
-                <Card className="p-5 flex items-center gap-4 bg-white/5 border-white/10 backdrop-blur">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
-                    <BookOpen className="w-5 h-5 text-white/70" />
+                <Card className="p-4 flex items-center gap-4 bg-card border border-border">
+                  <div className="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center">
+                    <BookOpen className="w-5 h-5 text-blue-500" />
                   </div>
                   <div>
-                    <p className="text-sm text-white/40">University</p>
-                    <p className="font-semibold text-white">University of Mindanao</p>
-                    <p className="text-sm text-white/40">College of Computing Education</p>
+                    <p className="text-sm text-muted-foreground">University</p>
+                    <p className="font-semibold text-foreground">University of Mindanao</p>
+                    <p className="text-sm text-muted-foreground">College of Computing Education</p>
                   </div>
                 </Card>
 
-                <Card className="p-5 flex items-center gap-4 bg-white/5 border-white/10 backdrop-blur">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-white/70" />
+                <Card className="p-4 flex items-center gap-4 bg-card border border-border">
+                  <div className="w-10 h-10 bg-purple-500/10 rounded-xl flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-purple-500" />
                   </div>
                   <div>
-                    <p className="text-sm text-white/40">Location</p>
-                    <p className="font-semibold text-white">Davao City, Philippines</p>
+                    <p className="text-sm text-muted-foreground">Location</p>
+                    <p className="font-semibold text-foreground">Davao City, Philippines</p>
                   </div>
                 </Card>
               </div>
 
               {/* Story */}
-              <Card className="p-6 bg-white border-0 relative">
-                <Quote className="absolute top-4 right-4 w-10 h-10 text-black/5" />
-                <h4 className="font-bold text-black mb-3">My Story</h4>
-                <p className="text-black/60 leading-relaxed text-sm">
+              <Card className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 border-0 relative">
+                <Quote className="absolute top-4 right-4 w-8 h-8 text-blue-500/20" />
+                <h4 className="font-bold text-foreground mb-3">My Story</h4>
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   As a 3rd-year BS Computer Science student at the University of Mindanao, I am passionate about technology and eager to learn from industry professionals. This educational tour represents a once-in-a-lifetime opportunity to bridge the gap between academic learning and real-world application.
                 </p>
-                <p className="text-black/60 leading-relaxed text-sm mt-3">
-                  I am humbly seeking financial assistance to help cover expenses for this tour. Any contribution, no matter how small, would bring me one step closer to this dream. <span className="text-black font-semibold">Your support means the world to me.</span>
+                <p className="text-muted-foreground leading-relaxed text-sm mt-3">
+                  I am humbly seeking financial assistance to help cover transportation, accommodation, meals, and other expenses for this tour. Any contribution, no matter how small, would bring me one step closer to this dream. <strong className="text-foreground">Your support means the world to me</strong> and will help shape my future in the IT industry.
                 </p>
               </Card>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

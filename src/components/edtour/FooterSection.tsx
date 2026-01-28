@@ -4,35 +4,35 @@ import { GraduationCap, Heart, Calendar } from 'lucide-react'
 
 export function FooterSection() {
   return (
-    <footer className="bg-white border-t-4 border-black">
+    <footer className="bg-gradient-to-b from-background to-muted/50 border-t border-border">
       <div className="container mx-auto px-6 py-12">
         <div className="text-center">
           {/* Logo/Title */}
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+              <GraduationCap className="w-5 h-5 text-white" />
             </div>
-            <h3 className="text-2xl font-black text-black">Manila EdTour 2026</h3>
+            <h3 className="text-xl font-bold text-foreground">Manila EdTour 2026</h3>
           </div>
 
-          <p className="text-black/50 mb-2 font-medium">
-            BS Computer Science • University of Mindanao
+          <p className="text-muted-foreground mb-2">
+            BS Computer Science - University of Mindanao
           </p>
 
-          <div className="flex items-center justify-center gap-2 text-sm text-black/40 mb-8">
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8">
             <Calendar className="w-4 h-4" />
             <span>Educational Tour • March 3-6, 2026</span>
           </div>
 
           {/* Divider */}
-          <div className="w-24 h-1 bg-black mx-auto mb-8" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-8" />
 
           {/* Made with love */}
-          <p className="text-sm text-black/50 flex items-center justify-center gap-1 mb-2">
-            Made with <Heart className="w-4 h-4 text-black fill-black" /> and hope
+          <p className="text-sm text-muted-foreground flex items-center justify-center gap-1 mb-2">
+            Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> and hope
           </p>
 
-          <p className="text-xs text-black/40">
+          <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} All rights reserved. Thank you for your support.
           </p>
         </div>

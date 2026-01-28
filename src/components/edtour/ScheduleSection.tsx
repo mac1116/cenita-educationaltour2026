@@ -2,14 +2,14 @@
 
 import { Plane, Building2, Utensils, Hotel, Camera, Sparkles, ShoppingBag } from 'lucide-react'
 import { Card } from '@/components/ui/card'
-import { motion } from 'framer-motion'
 
 export function ScheduleSection() {
   const schedule = [
     {
       day: 1,
       date: 'March 3, 2026',
-      title: 'Arrival & Company Visits',
+      title: 'Arrival and Company Visits',
+      color: 'from-blue-500 to-blue-600',
       activities: [
         { icon: Plane, text: 'Travel from Davao to Manila' },
         { icon: Building2, text: 'Company Visit 1' },
@@ -22,7 +22,8 @@ export function ScheduleSection() {
     {
       day: 2,
       date: 'March 4, 2026',
-      title: 'Tech & Culture',
+      title: 'Tech Exploration & Cultural Immersion',
+      color: 'from-purple-500 to-purple-600',
       activities: [
         { icon: Utensils, text: 'Breakfast' },
         { icon: Camera, text: 'Heritage/Cultural Tour' },
@@ -35,7 +36,8 @@ export function ScheduleSection() {
     {
       day: 3,
       date: 'March 5, 2026',
-      title: 'Fun & Learning',
+      title: 'Fun and Learning Day',
+      color: 'from-pink-500 to-pink-600',
       activities: [
         { icon: Utensils, text: 'Breakfast' },
         { icon: Building2, text: 'Company Visit 4' },
@@ -48,13 +50,14 @@ export function ScheduleSection() {
     {
       day: 4,
       date: 'March 6, 2026',
-      title: 'Departure',
+      title: 'Departure and Farewell',
+      color: 'from-emerald-500 to-emerald-600',
       activities: [
         { icon: Utensils, text: 'Breakfast' },
         { icon: Hotel, text: 'Hotel Check-out' },
         { icon: Building2, text: 'Company Visit 5' },
         { icon: Utensils, text: 'Lunch' },
-        { icon: ShoppingBag, text: 'Free & Easy/Shopping' },
+        { icon: ShoppingBag, text: 'Free & Easy/Shopping Time' },
         { icon: Utensils, text: 'Dinner' },
         { icon: Plane, text: 'Travel back to Davao' },
       ]
@@ -62,63 +65,52 @@ export function ScheduleSection() {
   ]
 
   return (
-    <section className="py-28 bg-white">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
-        >
-          <span className="inline-block text-xs font-semibold text-black/50 tracking-[0.2em] uppercase mb-4">
+        <div className="text-center mb-16">
+          <span className="inline-block text-sm font-semibold text-pink-500 bg-pink-500/10 px-4 py-2 rounded-full mb-4">
             Tour Schedule
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black mb-4 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-4">
             4-Day Itinerary
           </h2>
-          <p className="text-lg text-black/50 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A carefully planned schedule packed with learning opportunities and professional experiences.
           </p>
-        </motion.div>
+        </div>
 
         {/* Schedule Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {schedule.map((day, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+            <Card 
+              key={index} 
+              className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-card border border-border"
             >
-              <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-black/10 hover:border-black bg-white group">
-                {/* Day Header */}
-                <div className="bg-black p-6 text-white relative overflow-hidden">
-                  <div className="text-8xl font-black absolute -top-4 -right-2 text-white/10">
-                    {day.day}
-                  </div>
-                  <p className="text-white/50 text-sm font-medium">Day {day.day}</p>
-                  <p className="font-bold text-white/80">{day.date}</p>
-                  <h3 className="text-lg font-bold mt-2 relative z-10">{day.title}</h3>
+              {/* Day Header */}
+              <div className={`bg-gradient-to-r ${day.color} p-6 text-white`}>
+                <div className="text-5xl font-black opacity-30 absolute -top-2 -right-2">
+                  {day.day}
                 </div>
+                <p className="text-white/80 text-sm font-medium">Day {day.day}</p>
+                <p className="font-bold">{day.date}</p>
+                <h3 className="text-lg font-bold mt-2">{day.title}</h3>
+              </div>
 
-                {/* Activities */}
-                <div className="p-5">
-                  <ul className="space-y-3">
-                    {day.activities.map((activity, actIndex) => (
-                      <li key={actIndex} className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-black/5 group-hover:bg-black/10 flex items-center justify-center shrink-0 transition-colors">
-                          <activity.icon className="w-4 h-4 text-black/50" />
-                        </div>
-                        <span className="text-sm text-black/70">{activity.text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Card>
-            </motion.div>
+              {/* Activities */}
+              <div className="p-4">
+                <ul className="space-y-3">
+                  {day.activities.map((activity, actIndex) => (
+                    <li key={actIndex} className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center shrink-0">
+                        <activity.icon className="w-4 h-4 text-muted-foreground" />
+                      </div>
+                      <span className="text-sm text-foreground">{activity.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Card>
           ))}
         </div>
       </div>
