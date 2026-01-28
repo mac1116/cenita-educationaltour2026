@@ -23,7 +23,7 @@ export function ContactSection() {
       icon: MessageCircle,
       title: 'Messenger',
       value: 'Mheil Andrei Cenita',
-      href: 'https://m.me/',
+      href: 'https://www.facebook.com/mheilandrei.cenita',
       color: 'from-blue-500 to-indigo-500',
     },
   ]
