@@ -5,11 +5,12 @@ import { Card } from '@/components/ui/card'
 
 export function DonorsSection() {
   const topDonors = [
-    { rank: 1, name: 'A**Y GA**E A.', amount: 2000, icon: Trophy, color: 'from-yellow-400 to-amber-500' },
-    { rank: 2, name: 'J***E S.', amount: 500, icon: Medal, color: 'from-gray-300 to-gray-400' },
-    { rank: 3, name: 'R** AL*****E J.', amount: 9, icon: Award, color: 'from-amber-600 to-amber-700' },
-    { rank: 4, name: 'KE**N JO*N A.', amount: 6, icon: Star, color: 'from-blue-400 to-blue-500' },
-    { rank: 5, name: 'R*****O F.', amount: 5, icon: Star, color: 'from-purple-400 to-purple-500' },
+    { rank: 1, name: 'K******Y  S.', amount: 1000, icon: Trophy, color: 'from-yellow-400 to-amber-500' },
+    // { rank: 2, name: 'J***E S.', amount: 500, icon: Medal, color: 'from-gray-300 to-gray-400' },
+    // { rank: 3, name: 'R** AL*****E J.', amount: 9, icon: Award, color: 'from-amber-600 to-amber-700' },
+    // { rank: 4, name: 'KE**N JO*N A.', amount: 6, icon: Star, color: 'from-blue-400 to-blue-500' },
+    // { rank: 5, name: 'R*****O F.', amount: 5, icon: Star, color: 'from-purple-400 to-purple-500' },
+    // { rank: 6, name: 'R*****O F.', amount: 5, icon: Star, color: 'from-purple-400 to-purple-500' },
   ]
 
   const totalRaised = topDonors.reduce((sum, donor) => sum + donor.amount, 0)

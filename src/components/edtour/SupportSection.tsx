@@ -4,6 +4,9 @@ import { Heart, Smartphone, CreditCard, Copy, Check, MessageCircle } from 'lucid
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
+import gcashQr from '@/assets/gcash.jpg'
+import maribankQr from '@/assets/maribank.jpg'
+
 
 export function SupportSection() {
   const [copiedField, setCopiedField] = useState<string | null>(null)
@@ -17,17 +20,17 @@ export function SupportSection() {
   const paymentMethods = [
     {
       title: 'GCash',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-blue-400 to-blue-600',
       accountName: 'Mheil Andrei Cenita',
-      accountNumber: '0916 571 5798',
-      qrPlaceholder: true,
+      accountNumber: '09165715798',
+      qrImage: gcashQr,
     },
     {
-      title: 'Maya',
-      color: 'from-green-500 to-emerald-600',
+      title: 'Maribank',
+      color: 'from-orange-500 to-red-600',
       accountName: 'Mheil Andrei Cenita',
-      accountNumber: '0916 571 5798',
-      qrPlaceholder: true,
+      accountNumber: '18098069431',
+      qrImage: maribankQr,
     },
   ]
 
@@ -69,14 +72,13 @@ export function SupportSection() {
               </div>
 
               <div className="p-6">
-                {/* QR Code Placeholder */}
-                <div className="aspect-square max-w-48 mx-auto mb-6 bg-white rounded-2xl p-4 shadow-inner">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center">
-                    <div className="text-center">
-                      <CreditCard className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                      <p className="text-xs text-gray-500">QR Code</p>
-                    </div>
-                  </div>
+                {/* QR Code (larger) */}
+                <div className="aspect-square max-w-md mx-auto mb-6 bg-white rounded-2xl p-4 shadow-inner overflow-hidden">
+                  <img
+                    src={method.qrImage}
+                    alt={`${method.title} QR Code`}
+                    className="w-full h-full object-contain rounded-lg bg-white"
+                  />
                 </div>
 
                 {/* Account Details */}
