@@ -25,7 +25,7 @@ export function StudentProfile() {
                 <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-1">
                   <div className="bg-white rounded-3xl aspect-square flex items-center justify-center overflow-hidden">
                     <ImageWithFallback 
-                      src="src\assets\1x1.jpg"
+                      src="src\assets\mac.jpg"
                       alt="Mheil Andrei N. Cenita"
                       className="w-full h-full object-cover"
                     />
