@@ -72,72 +72,74 @@ export function ScheduleSection() {
   return (
     <section ref={ref} className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        {/* Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <span className="inline-block text-sm font-semibold text-pink-500 bg-pink-500/10 px-4 py-2 rounded-full mb-4">
-            Tour Schedule
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-4">
-            4-Day Itinerary
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A carefully planned schedule packed with learning opportunities and professional experiences.
-          </p>
-        </motion.div>
+        <div className="max-w-5xl mx-auto">
+          {/* Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-sm font-semibold text-foreground/60 bg-muted px-4 py-2 rounded-full mb-4 border border-border">
+              Tour Schedule
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-4">
+              4-Day Itinerary
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              A carefully planned schedule packed with learning opportunities and professional experiences.
+            </p>
+          </motion.div>
 
-        {/* Schedule Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {schedule.map((day, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-            >
-              <motion.div whileHover={{ y: -8 }}>
-                <Card 
-                  className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-card border border-border h-full"
-                >
-                  {/* Day Header */}
-                  <div className={`bg-gradient-to-r ${day.color} p-6 text-white relative overflow-hidden`}>
-                    <motion.div 
-                      className="absolute -right-4 -top-4 w-20 h-20 bg-white/10 rounded-full"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    />
-                    <p className="text-white/80 text-sm font-medium">Day {day.day}</p>
-                    <p className="font-bold">{day.date}</p>
-                    <h3 className="text-lg font-bold mt-2">{day.title}</h3>
-                  </div>
+          {/* Schedule Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {schedule.map((day, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+              >
+                <motion.div whileHover={{ y: -8 }}>
+                  <Card 
+                    className="overflow-hidden hover:shadow-xl transition-all duration-300 bg-card border border-border h-full"
+                  >
+                    {/* Day Header */}
+                    <div className="bg-foreground p-6 text-background relative overflow-hidden">
+                      <motion.div 
+                        className="absolute -right-4 -top-4 w-20 h-20 bg-background/10 rounded-full"
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                      />
+                      <p className="text-background/70 text-sm font-medium">Day {day.day}</p>
+                      <p className="font-bold">{day.date}</p>
+                      <h3 className="text-lg font-bold mt-2">{day.title}</h3>
+                    </div>
 
-                  {/* Activities */}
-                  <div className="p-4">
-                    <ul className="space-y-3">
-                      {day.activities.map((activity, actIndex) => (
-                        <motion.li 
-                          key={actIndex} 
-                          className="flex items-center gap-3"
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={isInView ? { opacity: 1, x: 0 } : {}}
-                          transition={{ duration: 0.3, delay: index * 0.15 + actIndex * 0.05 }}
-                        >
-                          <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center shrink-0">
-                            <activity.icon className="w-4 h-4 text-muted-foreground" />
-                          </div>
-                          <span className="text-sm text-foreground">{activity.text}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </div>
-                </Card>
+                    {/* Activities */}
+                    <div className="p-5">
+                      <ul className="space-y-3">
+                        {day.activities.map((activity, actIndex) => (
+                          <motion.li 
+                            key={actIndex} 
+                            className="flex items-center gap-3"
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={isInView ? { opacity: 1, x: 0 } : {}}
+                            transition={{ duration: 0.3, delay: index * 0.15 + actIndex * 0.05 }}
+                          >
+                            <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center shrink-0">
+                              <activity.icon className="w-4 h-4 text-muted-foreground" />
+                            </div>
+                            <span className="text-sm text-foreground">{activity.text}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
+                  </Card>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
