@@ -117,8 +117,20 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      {/* --- FLIPPED SYMMETRICAL CURVE DIVIDER --- */}
+<div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0]">
+  <svg 
+    viewBox="0 0 1200 120" 
+    preserveAspectRatio="none" 
+    className="relative block w-full h-[60px] md:h-[120px]"
+  >
+    {/* Flipped Hill Shape (The Valley) */}
+    <path 
+      d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" 
+      className="fill-white"
+    />
+  </svg>
+</div>
     </section>
   )
 }
