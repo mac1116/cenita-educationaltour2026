@@ -12,8 +12,8 @@ export function DonorsSection() {
   const [animatedPercentage, setAnimatedPercentage] = useState(0)
 
   const topDonors = [
-    { rank: 1, name: 'K******Y  S.', amount: 1000, icon: Trophy, color: 'from-yellow-400 to-amber-500' },
-    { rank: 2, name: 'Bank Transfer from Philippine National Bank (PNB) with account ending in 8**5', amount: 1000, icon: Medal, color: 'from-gray-300 to-gray-400' },
+    { rank: 1, name: 'Bank Transfer from Philippine National Bank (PNB) with account ending in 8**5', amount: 1000, icon: Trophy, color: 'from-yellow-400 to-amber-500' },
+    { rank: 2, name: 'K******Y  S.', amount: 1000, icon: Medal, color: 'from-gray-300 to-gray-400' },
     { rank: 3, name: 'SU****E G.', amount: 500, icon: Award, color: 'from-amber-600 to-amber-700' },
     { rank: 4, name: 'Bank Transfer from BDO Unibank Inc. with account ending in 2**8', amount: 350, icon: Star, color: 'from-green-400 to-green-500' },
     { rank: 5, name: 'BERNARDITA CABATUAN', amount: 200, icon: Star, color: 'from-blue-400 to-blue-500'},
