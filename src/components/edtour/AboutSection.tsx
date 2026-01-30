@@ -64,10 +64,10 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-sm font-semibold text-blue-500 bg-blue-500/10 px-4 py-2 rounded-full mb-4">
+          <span className="inline-block text-sm font-bold text-primary bg-primary/10 px-4 py-2 rounded-lg mb-4 uppercase tracking-wide">
             About This Opportunity
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-6">
+          <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-6 tracking-tight">
             Educational Tour to Manila
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -81,9 +81,9 @@ export function AboutSection() {
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Card className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50 border-0 p-8 mb-16 max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/50 dark:to-slate-800/50 border border-border p-8 mb-16 max-w-4xl mx-auto">
             <p className="text-muted-foreground leading-relaxed text-center">
-              The educational tour will be held in Manila for a duration of <strong className="text-foreground">four days and three nights</strong>. The total cost amounts to <strong className="text-foreground">Twenty Four Thousand Eight Hundred Pesos (₱24,800.00)</strong> per participant, which will cover transportation, accommodation, meals, entrance fees, and other tour related expenses necessary for the successful conduct of the activity.
+              The educational tour will be held in Manila for a duration of <strong className="text-foreground font-bold">four days and three nights</strong>. The total cost amounts to <strong className="text-primary font-bold">Twenty Four Thousand Eight Hundred Pesos (₱24,800.00)</strong> per participant, which will cover transportation, accommodation, meals, entrance fees, and other tour related expenses necessary for the successful conduct of the activity.
             </p>
           </Card>
         </motion.div>
@@ -94,9 +94,9 @@ export function AboutSection() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-2xl font-bold text-center mb-10"
+            className="text-2xl font-bold text-center mb-10 tracking-tight"
           >
-            What's Included in <span className="text-blue-500">₱24,800.00</span>?
+            What's Included in <span className="text-primary">₱24,800.00</span>?
           </motion.h3>
           <motion.div 
             variants={containerVariants}
@@ -110,9 +110,9 @@ export function AboutSection() {
                   className="p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-card border border-border group"
                 >
                   <motion.div 
-                    whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                    whileHover={{ rotate: [0, -5, 5, 0], scale: 1.1 }}
                     transition={{ duration: 0.4 }}
-                    className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center"
+                    className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary to-teal-600 rounded-xl flex items-center justify-center"
                   >
                     <item.icon className="w-7 h-7 text-white" />
                   </motion.div>
@@ -130,7 +130,7 @@ export function AboutSection() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-2xl font-bold text-center mb-10"
+            className="text-2xl font-bold text-center mb-10 tracking-tight"
           >
             Why This Tour Matters
           </motion.h3>
@@ -147,7 +147,7 @@ export function AboutSection() {
                 >
                   <motion.div 
                     whileHover={{ scale: 1.15, rotate: 5 }}
-                    className="w-12 h-12 shrink-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center"
+                    className="w-12 h-12 shrink-0 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center"
                   >
                     <benefit.icon className="w-6 h-6 text-white" />
                   </motion.div>

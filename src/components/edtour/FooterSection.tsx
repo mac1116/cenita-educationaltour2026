@@ -26,11 +26,11 @@ export function FooterSection() {
           >
             <motion.div 
               whileHover={{ rotate: 10, scale: 1.1 }}
-              className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center"
+              className="w-10 h-10 bg-gradient-to-br from-primary to-teal-600 rounded-xl flex items-center justify-center"
             >
               <GraduationCap className="w-5 h-5 text-white" />
             </motion.div>
-            <h3 className="text-xl font-bold text-foreground">Manila EdTour 2026</h3>
+            <h3 className="text-xl font-bold text-foreground tracking-tight">Manila EdTour 2026</h3>
           </motion.div>
 
           <p className="text-muted-foreground mb-2">
@@ -47,7 +47,7 @@ export function FooterSection() {
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-8" 
+            className="w-24 h-1 bg-gradient-to-r from-primary to-teal-600 mx-auto rounded-full mb-8" 
           />
 
           {/* Made with love */}
