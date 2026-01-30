@@ -117,15 +117,15 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Clean geometric divider */}
+      {/* Wavy curve divider */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0]">
         <svg 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none" 
-          className="relative block w-full h-[60px] md:h-[100px]"
+          className="relative block w-full h-[60px] md:h-[120px]"
         >
           <path 
-            d="M0,0 L0,60 Q600,120 1200,60 L1200,0 Z" 
+            d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" 
             className="fill-background"
           />
         </svg>
