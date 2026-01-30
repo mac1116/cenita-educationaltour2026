@@ -14,8 +14,10 @@ export function DonorsSection() {
   const topDonors = [
     { rank: 1, name: 'K******Y  S.', amount: 1000, icon: Trophy, color: 'from-yellow-400 to-amber-500' },
     { rank: 2, name: 'Bank Transfer from BDO Unibank Inc. with account ending in 2368', amount: 350, icon: Medal, color: 'from-gray-300 to-gray-400' },
-    { rank: 3, name: 'BERNARDITA CABATUAN', amount: 200, icon: Award, color: 'from-amber-600 to-amber-700' },
-    { rank: 4, name: 'LO**E J** M.', amount: 1, icon: Star, color: 'from-blue-400 to-blue-500' },
+    { rank: 3, name: 'SU****E G.', amount: 500, icon: Award, color: 'from-amber-600 to-amber-700' },
+    { rank: 4, name: 'BERNARDITA CABATUAN', amount: 200, icon: Star, color: 'from-blue-400 to-blue-500'},
+    { rank: 5, name: 'RO***T JH*N A.', amount: 5, icon: Star, color: 'from-red-400 to-red-500' },
+    { rank: 6, name: 'LO**E J** M.', amount: 1, icon: Star, color: 'from-green-400 to-green-500' },
   ]
 
   const totalRaised = topDonors.reduce((sum, donor) => sum + donor.amount, 0)
