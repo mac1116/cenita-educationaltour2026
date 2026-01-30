@@ -14,7 +14,7 @@ export function ScheduleSection() {
       day: 1,
       date: 'March 3, 2026',
       title: 'Arrival and Company Visits',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-teal-600 to-teal-700',
       activities: [
         { icon: Plane, text: 'Travel from Davao to Manila' },
         { icon: Building2, text: 'Company Visit 1' },
@@ -28,7 +28,7 @@ export function ScheduleSection() {
       day: 2,
       date: 'March 4, 2026',
       title: 'Tech Exploration & Cultural Immersion',
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-slate-700 to-slate-800',
       activities: [
         { icon: Utensils, text: 'Breakfast' },
         { icon: Camera, text: 'Heritage / Cultural Tour' },
@@ -42,7 +42,7 @@ export function ScheduleSection() {
       day: 3,
       date: 'March 5, 2026',
       title: 'Fun and Learning Day',
-      color: 'from-pink-500 to-pink-600',
+      color: 'from-amber-600 to-amber-700',
       activities: [
         { icon: Utensils, text: 'Breakfast' },
         { icon: Building2, text: 'Company Visit 4' },
@@ -56,7 +56,7 @@ export function ScheduleSection() {
       day: 4,
       date: 'March 6, 2026',
       title: 'Departure and Farewell',
-      color: 'from-emerald-500 to-emerald-600',
+      color: 'from-cyan-700 to-cyan-800',
       activities: [
         { icon: Utensils, text: 'Breakfast' },
         { icon: Hotel, text: 'Hotel Check-out' },
@@ -80,10 +80,10 @@ export function ScheduleSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-sm font-semibold text-pink-500 bg-pink-500/10 px-4 py-2 rounded-full mb-4">
+          <span className="inline-block text-sm font-bold text-amber-600 bg-amber-500/10 px-4 py-2 rounded-lg mb-4 uppercase tracking-wide">
             Tour Schedule
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-4 tracking-tight">
             4-Day Itinerary
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -111,7 +111,7 @@ export function ScheduleSection() {
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 3, repeat: Infinity }}
                     />
-                    <p className="text-white/80 text-sm font-medium">Day {day.day}</p>
+                    <p className="text-white/80 text-sm font-semibold uppercase tracking-wide">Day {day.day}</p>
                     <p className="font-bold">{day.date}</p>
                     <h3 className="text-lg font-bold mt-2">{day.title}</h3>
                   </div>

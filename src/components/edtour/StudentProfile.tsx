@@ -14,14 +14,14 @@ export function StudentProfile() {
     <section ref={ref} className="py-24 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
       {/* Background decoration */}
       <motion.div 
-        animate={{ scale: [1, 1.1, 1], opacity: [0.05, 0.1, 0.05] }}
+        animate={{ scale: [1, 1.1, 1], opacity: [0.03, 0.06, 0.03] }}
         transition={{ duration: 6, repeat: Infinity }}
-        className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" 
+        className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" 
       />
       <motion.div 
-        animate={{ scale: [1.1, 1, 1.1], opacity: [0.05, 0.1, 0.05] }}
+        animate={{ scale: [1.1, 1, 1.1], opacity: [0.03, 0.06, 0.03] }}
         transition={{ duration: 7, repeat: Infinity }}
-        className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" 
+        className="absolute bottom-0 left-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" 
       />
 
       <div className="container mx-auto px-6 relative">
@@ -38,18 +38,18 @@ export function StudentProfile() {
                 {/* Decorative rings */}
                 <motion.div 
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl rotate-6 opacity-20" 
+                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0 bg-gradient-to-br from-primary to-teal-600 rounded-2xl rotate-6 opacity-15" 
                 />
                 <motion.div 
                   animate={{ rotate: -360 }}
-                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl -rotate-3 opacity-20" 
+                  transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl -rotate-3 opacity-15" 
                 />
                 
                 {/* Main image container */}
-                <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-1">
-                  <div className="bg-white rounded-3xl aspect-square flex items-center justify-center overflow-hidden">
+                <div className="relative bg-gradient-to-br from-primary to-teal-600 rounded-2xl p-1">
+                  <div className="bg-card rounded-2xl aspect-square flex items-center justify-center overflow-hidden">
                     <img
                       src={profilePic}
                       alt="Mheil Andrei N. Cenita"
@@ -67,11 +67,11 @@ export function StudentProfile() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="w-full text-center"
             >
-              <span className="inline-block text-sm font-semibold text-purple-500 bg-purple-500/10 px-2 py-2 rounded-full mb-4">
+              <span className="inline-block text-sm font-bold text-primary bg-primary/10 px-4 py-2 rounded-lg mb-4 uppercase tracking-wide">
                 Meet the Student
               </span>
               
-              <h2 className="text-4xl font-black text-foreground mb-6">
+              <h2 className="text-4xl font-black text-foreground mb-6 tracking-tight">
                 About Me
               </h2>
 
@@ -84,24 +84,24 @@ export function StudentProfile() {
               >
                 <motion.div whileHover={{ scale: 1.03, y: -5 }}>
                   <Card className="p-4 flex flex-col items-center gap-4 bg-card border border-border flex-1 min-w-xs h-full">
-                    <div className="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center">
-                      <BookOpen className="w-5 h-5 text-blue-500" />
+                    <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-primary" />
                     </div>
                     <div className="text-center">
-                      <p className="text-xs text-muted-foreground">University</p>
-                      <p className="font-semibold text-foreground">University of Mindanao</p>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wide">University</p>
+                      <p className="font-bold text-foreground">University of Mindanao</p>
                     </div>
                   </Card>
                 </motion.div>
 
                 <motion.div whileHover={{ scale: 1.03, y: -5 }}>
                   <Card className="p-4 flex flex-col items-center gap-4 bg-card border border-border flex-1 min-w-xs h-full">
-                    <div className="w-10 h-10 bg-purple-500/10 rounded-xl flex items-center justify-center">
-                      <MapPin className="w-5 h-5 text-purple-500" />
+                    <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
+                      <MapPin className="w-5 h-5 text-amber-600" />
                     </div>
                     <div className="text-center">
-                      <p className="text-xs text-muted-foreground">Location</p>
-                      <p className="font-semibold text-foreground">Davao City, Philippines</p>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wide">Location</p>
+                      <p className="font-bold text-foreground">Davao City, Philippines</p>
                     </div>
                   </Card>
                 </motion.div>
@@ -113,8 +113,8 @@ export function StudentProfile() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <Card className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 border-0 relative text-left">
-                  <Quote className="absolute top-4 right-4 w-8 h-8 text-blue-500/20" />
+                <Card className="p-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/50 dark:to-slate-800/50 border border-border relative text-left">
+                  <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/15" />
                   <h4 className="font-bold text-foreground mb-3">My Story</h4>
                   <p className="text-muted-foreground leading-relaxed text-sm">
                     As a 3rd-year BS Computer Science student at the University of Mindanao, I am passionate about technology and eager to learn from industry professionals. This educational tour represents a once-in-a-lifetime opportunity to bridge the gap between academic learning and real-world application.

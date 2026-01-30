@@ -13,12 +13,11 @@ export function DonorsSection() {
 
   const topDonors = [
     { rank: 1, name: 'K******Y  S.', amount: 1000, icon: Trophy, color: 'from-yellow-400 to-amber-500' },
-    { rank: 2, name: 'Bank Transfer from Philippine National Bank (PNB) with account ending in 8**5', amount: 1000, icon: Medal, color: 'from-gray-300 to-gray-400' },
-    { rank: 3, name: 'Bank Transfer from BDO Unibank Inc. with account ending in 2**8', amount: 350, icon: Award, color: 'from-amber-600 to-amber-700' },
-    { rank: 4, name: 'SU****E G.', amount: 500, icon: Star, color: 'from-green-400 to-green-500' },
-    { rank: 5, name: 'BERNARDITA CABATUAN', amount: 200, icon: Star, color: 'from-blue-400 to-blue-500'},
-    { rank: 6, name: 'RO***T JH*N A.', amount: 5, icon: Star, color: 'from-red-400 to-red-500' },
-    { rank: 7, name: 'LO**E J** M.', amount: 1, icon: Star, color: 'from-green-400 to-green-500' },
+    { rank: 2, name: 'Bank Transfer from BDO Unibank Inc. with account ending in 2368', amount: 350, icon: Medal, color: 'from-gray-300 to-gray-400' },
+    { rank: 3, name: 'SU****E G.', amount: 500, icon: Award, color: 'from-amber-600 to-amber-700' },
+    { rank: 4, name: 'BERNARDITA CABATUAN', amount: 200, icon: Star, color: 'from-blue-400 to-blue-500'},
+    { rank: 5, name: 'RO***T JH*N A.', amount: 5, icon: Star, color: 'from-red-400 to-red-500' },
+    { rank: 6, name: 'LO**E J** M.', amount: 1, icon: Star, color: 'from-green-400 to-green-500' },
   ]
 
   const totalRaised = topDonors.reduce((sum, donor) => sum + donor.amount, 0)
@@ -55,10 +54,10 @@ export function DonorsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-sm font-semibold text-amber-500 bg-amber-500/10 px-4 py-2 rounded-full mb-4">
+          <span className="inline-block text-sm font-bold text-amber-600 bg-amber-500/10 px-4 py-2 rounded-lg mb-4 uppercase tracking-wide">
             Recognition
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black text-foreground mb-4 tracking-tight">
             Top Givers
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -72,23 +71,23 @@ export function DonorsSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Card className="max-w-3xl mx-auto mb-16 p-8 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50 border-0">
+          <Card className="max-w-3xl mx-auto mb-16 p-8 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/50 dark:to-slate-800/50 border border-border">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <motion.div 
-                  animate={{ rotate: [0, 10, -10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center"
+                  animate={{ rotate: [0, 5, -5, 0] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="w-12 h-12 bg-gradient-to-br from-primary to-teal-600 rounded-xl flex items-center justify-center"
                 >
                   <Target className="w-6 h-6 text-white" />
                 </motion.div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Fundraising Goal</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide font-medium">Fundraising Goal</p>
                   <p className="text-2xl font-black text-foreground">₱{goal.toLocaleString()}</p>
                 </div>
               </div>
               <div className="text-right">
-                <div className="flex items-center gap-2 text-emerald-500">
+                <div className="flex items-center gap-2 text-primary">
                   <TrendingUp className="w-5 h-5" />
                   <span className="font-bold">{animatedPercentage.toFixed(1)}%</span>
                 </div>
@@ -97,9 +96,9 @@ export function DonorsSection() {
             </div>
 
             {/* Progress Bar */}
-            <div className="relative h-6 bg-muted rounded-full overflow-hidden mb-4">
+            <div className="relative h-6 bg-muted rounded-lg overflow-hidden mb-4">
               <motion.div 
-                className="absolute inset-y-0 left-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full"
+                className="absolute inset-y-0 left-0 bg-gradient-to-r from-primary via-teal-500 to-cyan-500 rounded-lg"
                 initial={{ width: 0 }}
                 animate={isInView ? { width: `${percentage}%` } : {}}
                 transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
@@ -113,7 +112,7 @@ export function DonorsSection() {
 
             <div className="flex justify-between text-sm">
               <span className="text-muted-foreground">₱0</span>
-              <span className="font-semibold text-foreground">₱{(goal - totalRaised).toLocaleString()} to go!</span>
+              <span className="font-bold text-foreground">₱{(goal - totalRaised).toLocaleString()} to go!</span>
               <span className="text-muted-foreground">₱{goal.toLocaleString()}</span>
             </div>
           </Card>
@@ -126,9 +125,9 @@ export function DonorsSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Card className="max-w-2xl mx-auto overflow-hidden bg-card border border-border">
-            <div className="bg-gradient-to-r from-amber-500 to-orange-500 p-4 text-white text-center">
-              <h3 className="text-xl font-bold flex items-center justify-center gap-2">
-                <motion.div animate={{ rotate: [0, 15, -15, 0] }} transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}>
+            <div className="bg-gradient-to-r from-amber-500 to-amber-600 p-4 text-white text-center">
+              <h3 className="text-xl font-bold flex items-center justify-center gap-2 tracking-tight">
+                <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 2 }}>
                   <Trophy className="w-6 h-6" />
                 </motion.div>
                 Leaderboard
@@ -150,7 +149,7 @@ export function DonorsSection() {
                   {/* Rank */}
                   <motion.div 
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className={`w-10 h-10 rounded-full bg-gradient-to-br ${donor.color} flex items-center justify-center shadow-lg`}
+                    className={`w-10 h-10 rounded-lg bg-gradient-to-br ${donor.color} flex items-center justify-center shadow-lg`}
                   >
                     {donor.rank <= 3 ? (
                       <donor.icon className="w-5 h-5 text-white" />
@@ -167,7 +166,7 @@ export function DonorsSection() {
 
                   {/* Amount */}
                   <div className="text-right">
-                    <p className={`font-bold ${donor.rank === 1 ? 'text-xl text-amber-500' : 'text-foreground'}`}>
+                    <p className={`font-bold ${donor.rank === 1 ? 'text-xl text-amber-600' : 'text-foreground'}`}>
                       ₱{donor.amount.toLocaleString()}
                     </p>
                   </div>
