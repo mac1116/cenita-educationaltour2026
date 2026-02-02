@@ -85,8 +85,8 @@ export function DonorsSection() {
                   <Target className="w-6 h-6 text-white" />
                 </motion.div>
                 <div>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide font-medium">Fundraising Goal</p>
-                  <p className="text-2xl font-black text-foreground">₱{goal.toLocaleString()}</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide font-medium">Total Raised</p>
+                  <p className="text-3xl font-black text-primary">₱{animatedTotal.toLocaleString()}</p>
                 </div>
               </div>
               <div className="text-right">
@@ -94,7 +94,7 @@ export function DonorsSection() {
                   <TrendingUp className="w-5 h-5" />
                   <span className="font-bold">{animatedPercentage.toFixed(1)}%</span>
                 </div>
-                <p className="text-sm text-muted-foreground">of goal reached</p>
+                <p className="text-sm text-muted-foreground">of ₱{goal.toLocaleString()} goal</p>
               </div>
             </div>
 
