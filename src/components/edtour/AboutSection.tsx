@@ -81,9 +81,9 @@ export function AboutSection() {
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Card className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/50 dark:to-slate-800/50 border border-border p-8 mb-16 max-w-4xl mx-auto">
-            <p className="text-muted-foreground leading-relaxed text-center">
-              The educational tour will be held in Manila for a duration of <strong className="text-foreground font-bold">four days and three nights</strong>. The total cost amounts to <strong className="text-primary font-bold">Twenty Four Thousand Eight Hundred Pesos (₱24,800.00)</strong> per participant, which will cover transportation, accommodation, meals, entrance fees, and other tour related expenses necessary for the successful conduct of the activity.
+          <Card className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/50 dark:to-slate-800/50 border border-border p-8 mb-16 max-w-4xl mx-auto shadow-sm hover:shadow-md transition-shadow duration-300">
+            <p className="text-muted-foreground leading-relaxed text-center text-base">
+              The educational tour will be held in Manila for a duration of <strong className="text-foreground font-semibold">four days and three nights</strong>. The total cost amounts to <strong className="text-primary font-semibold">Twenty Four Thousand Eight Hundred Pesos (₱24,800.00)</strong> per participant, which will cover transportation, accommodation, meals, entrance fees, and other tour related expenses necessary for the successful conduct of the activity.
             </p>
           </Card>
         </motion.div>
@@ -107,17 +107,13 @@ export function AboutSection() {
             {inclusions.map((item, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <Card 
-                  className="p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-card border border-border group"
+                  className="p-6 text-center hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1 bg-card border border-border group"
                 >
-                  <motion.div 
-                    whileHover={{ rotate: [0, -5, 5, 0], scale: 1.1 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary to-teal-600 rounded-xl flex items-center justify-center"
-                  >
+                  <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary to-teal-600 rounded-xl flex items-center justify-center shadow-md shadow-primary/20 group-hover:shadow-lg group-hover:shadow-primary/30 transition-shadow">
                     <item.icon className="w-7 h-7 text-white" />
-                  </motion.div>
-                  <h4 className="font-bold text-foreground mb-2">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </div>
+                  <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-snug">{item.desc}</p>
                 </Card>
               </motion.div>
             ))}
@@ -143,16 +139,13 @@ export function AboutSection() {
             {benefits.map((benefit, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <Card 
-                  className="p-6 flex gap-4 hover:shadow-lg transition-all duration-300 bg-card border border-border group"
+                  className="p-6 flex gap-4 hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300 hover:-translate-y-1 bg-card border border-border group"
                 >
-                  <motion.div 
-                    whileHover={{ scale: 1.15, rotate: 5 }}
-                    className="w-12 h-12 shrink-0 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center"
-                  >
+                  <div className="w-12 h-12 shrink-0 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-md shadow-amber-500/20 group-hover:shadow-lg group-hover:shadow-amber-500/30 transition-shadow">
                     <benefit.icon className="w-6 h-6 text-white" />
-                  </motion.div>
+                  </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-2">{benefit.title}</h4>
+                    <h4 className="font-semibold text-foreground mb-1">{benefit.title}</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">{benefit.desc}</p>
                   </div>
                 </Card>

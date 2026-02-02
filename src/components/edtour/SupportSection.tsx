@@ -88,27 +88,24 @@ export function SupportSection() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <motion.div whileHover={{ y: -5 }}>
-                <Card className="overflow-hidden bg-card border border-border hover:shadow-xl transition-all duration-300">
+                <Card className="overflow-hidden bg-card border border-border hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                   {/* Header */}
-                  <div className={`bg-gradient-to-r ${method.color} p-4 text-white`}>
-                    <h3 className="text-xl font-bold flex items-center gap-2 tracking-tight">
+                  <div className={`bg-gradient-to-r ${method.color} p-5 text-white`}>
+                    <h3 className="text-xl font-semibold flex items-center gap-3 tracking-tight">
                       <Smartphone className="w-5 h-5" />
                       {method.title} Donation
                     </h3>
                   </div>
 
                   <div className="p-6">
-                    {/* QR Code (larger) */}
-                    <motion.div 
-                      whileHover={{ scale: 1.02 }}
-                      className="aspect-square max-w-md mx-auto mb-6 bg-white rounded-xl p-4 shadow-inner overflow-hidden"
-                    >
+                    {/* QR Code */}
+                    <div className="aspect-square max-w-sm mx-auto mb-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl p-3 shadow-inner overflow-hidden">
                       <img
                         src={method.qrImage}
                         alt={`${method.title} QR Code`}
-                        className="w-full h-full object-contain rounded-lg bg-white"
+                        className="w-full h-full object-contain rounded-lg"
                       />
-                    </motion.div>
+                    </div>
 
                     {/* Account Details */}
                     <div className="space-y-4">
@@ -150,14 +147,10 @@ export function SupportSection() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center"
         >
-          <Card className="inline-block bg-gradient-to-r from-primary/10 via-teal-500/10 to-cyan-500/10 border border-border p-6">
-            <motion.p 
-              animate={{ scale: [1, 1.02, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="text-lg text-foreground font-bold"
-            >
+          <Card className="inline-block bg-gradient-to-r from-primary/5 via-teal-500/5 to-cyan-500/5 border border-primary/20 px-8 py-5 shadow-sm">
+            <p className="text-lg text-foreground font-semibold">
               Thank you for your support! 💙
-            </motion.p>
+            </p>
           </Card>
         </motion.div>
       </div>
