@@ -343,23 +343,16 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Wavy curve divider with gradient */}
+      {/* Wavy curve divider */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0]">
         <svg 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none" 
           className="relative block w-full h-[80px] md:h-[140px]"
         >
-          <defs>
-            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="hsl(var(--background))" />
-              <stop offset="50%" stopColor="hsl(var(--background))" />
-              <stop offset="100%" stopColor="hsl(var(--background))" />
-            </linearGradient>
-          </defs>
           <motion.path 
             d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" 
-            fill="url(#waveGradient)"
+            className="fill-background"
             initial={{ d: "M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" }}
             animate={{ 
               d: [
