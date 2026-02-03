@@ -3,7 +3,7 @@
 import { Calendar, MapPin, GraduationCap, Heart, Sparkles, Rocket, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import profilePic from '@/assets/mac.jpg'
+import profilePic from '@/assets/mac.png'
 
 export function HeroSection() {
   const scrollToSupport = () => {
@@ -163,26 +163,40 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Name */}
-          <motion.p
+          {/* Name - Decorated Version */}
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-white font-semibold text-base mb-1"
+            className="flex flex-col items-center mb-4"
           >
-            Mheil Andrei N. Cenita
-          </motion.p>
+            <div className="relative inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm shadow-sm group">
+              {/* Pulsing indicator */}
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+              </span>
+              
+              <p className="text-white font-bold text-sm sm:text-base tracking-tight">
+                Mheil Andrei N. Cenita
+              </p>
+
+              {/* Decorative side line - optional flair */}
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-transparent via-teal-400 to-transparent group-hover:w-full transition-all duration-500" />
+            </div>
+            
+          </motion.div>
 
           {/* Badge with glow effect */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative inline-flex items-center gap-2 mb-3"
+            className="relative inline-flex items-center gap-2 mb-7"
           >
             <div className="relative inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-3 py-1.5">
               <GraduationCap className="w-4 h-4 text-teal-400" />
-              <span className="text-xs font-bold tracking-wide text-teal-200 uppercase">BS Computer Science - University of Mindanao</span>
+              <span className="text-xs font-bold tracking-wide text-teal-200 uppercase ">BS Computer Science - University of Mindanao</span>
             </div>
           </motion.div>
 
@@ -191,11 +205,11 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight mb-3 tracking-tight"
+            className="text-2xl font-black text-white leading-tight mb-3 tracking-tight"
           >
             <span>Help Me Pursue My</span>
-            <span className="block bg-gradient-to-r from-teal-400 via-cyan-300 to-amber-400 bg-clip-text text-transparent">
-              Educational Tour
+            <span className="text-6xl block bg-gradient-to-r from-teal-400 via-cyan-300 to-amber-400 bg-clip-text text-transparent">
+              Educational Tour 2026
             </span>
           </motion.h1>
 
@@ -204,7 +218,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto mb-4 leading-relaxed"
+            className="text-sx sm:text-base text-slate-300 max-w-4xl mx-auto mb-4 leading-relaxed"
           >
             I'm seeking financial support for an educational tour to Manila's top tech companies—an opportunity to learn from industry professionals and prepare for my future career.
           </motion.p>
