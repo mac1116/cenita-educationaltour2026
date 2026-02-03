@@ -139,43 +139,49 @@ export function HeroSection() {
       {/* Radial spotlight effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(15,23,42,0.4)_70%)]" />
 
-      <div className="container mx-auto px-6 relative z-10 pt-8">
+      <div className="container mx-auto px-6 relative z-10 pt-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Animated sparkle above badge */}
+          {/* Profile Picture */}
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
             className="flex justify-center mb-2"
           >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-            >
-              <Sparkles className="w-6 h-6 text-amber-400" />
-            </motion.div>
+            <div className="relative">
+              <motion.div
+                className="absolute inset-0 bg-teal-500/30 rounded-full blur-lg"
+                animate={{ opacity: [0.5, 0.8, 0.5], scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+              <img 
+                src="/placeholder.svg" 
+                alt="Profile"
+                className="relative w-16 h-16 rounded-full border-2 border-teal-400/50 object-cover bg-slate-700"
+              />
+            </div>
           </motion.div>
+
+          {/* Name */}
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-white font-semibold text-base mb-1"
+          >
+            Your Name Here
+          </motion.p>
 
           {/* Badge with glow effect */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative inline-flex items-center gap-2 mb-4"
+            className="relative inline-flex items-center gap-2 mb-3"
           >
-            <motion.div
-              className="absolute inset-0 bg-teal-500/20 rounded-xl blur-xl"
-              animate={{ opacity: [0.5, 0.8, 0.5], scale: [1, 1.1, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <div className="relative inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2">
-              <motion.div
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <GraduationCap className="w-5 h-5 text-teal-400" />
-              </motion.div>
-              <span className="text-sm font-bold tracking-wide text-teal-200 uppercase">BS Computer Science - University of Mindanao</span>
+            <div className="relative inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-3 py-1.5">
+              <GraduationCap className="w-4 h-4 text-teal-400" />
+              <span className="text-xs font-bold tracking-wide text-teal-200 uppercase">BS Computer Science - University of Mindanao</span>
             </div>
           </motion.div>
 
@@ -184,40 +190,22 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4 tracking-tight"
+            className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight mb-3 tracking-tight"
           >
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              Help Me Pursue My
-            </motion.span>
-            <motion.span 
-              className="block bg-gradient-to-r from-teal-400 via-cyan-300 to-amber-400 bg-clip-text text-transparent relative"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.5, type: "spring" }}
-            >
-              <motion.span
-                animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                style={{ backgroundSize: '200% auto' }}
-                className="bg-gradient-to-r from-teal-400 via-cyan-300 to-amber-400 bg-clip-text text-transparent"
-              >
-                Educational Tour
-              </motion.span>
-            </motion.span>
+            <span>Help Me Pursue My</span>
+            <span className="block bg-gradient-to-r from-teal-400 via-cyan-300 to-amber-400 bg-clip-text text-transparent">
+              Educational Tour
+            </span>
           </motion.h1>
 
-          {/* Description with staggered word animation feel */}
+          {/* Description */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-6 leading-relaxed"
+            className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto mb-4 leading-relaxed"
           >
-            I'm seeking financial support for an educational tour to Manila's top tech companies—an opportunity to learn from industry professionals and prepare for my future career in Computer Science.
+            I'm seeking financial support for an educational tour to Manila's top tech companies—an opportunity to learn from industry professionals and prepare for my future career.
           </motion.p>
 
           {/* Enhanced tour info badges */}
@@ -225,112 +213,56 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="flex flex-wrap justify-center gap-3 mb-6"
+            className="flex flex-wrap justify-center gap-2 mb-4"
           >
-            <motion.div 
-              whileHover={{ scale: 1.08, y: -3 }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative flex items-center gap-2 bg-slate-800/60 backdrop-blur-md rounded-xl px-4 py-3 border border-slate-700/50 cursor-pointer overflow-hidden"
-            >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
-              />
-              <motion.div
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="relative"
-              >
-                <Calendar className="w-6 h-6 text-amber-400" />
-              </motion.div>
-              <div className="relative">
-                <span className="text-xs text-slate-400 uppercase tracking-wider block">Tour Date</span>
-                <span className="text-white font-bold text-lg">March 3-6, 2026</span>
+            <div className="flex items-center gap-2 bg-slate-800/60 backdrop-blur-md rounded-lg px-3 py-2 border border-slate-700/50">
+              <Calendar className="w-5 h-5 text-amber-400" />
+              <div>
+                <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Tour Date</span>
+                <span className="text-white font-bold text-sm">March 3-6, 2026</span>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              whileHover={{ scale: 1.08, y: -3 }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative flex items-center gap-2 bg-slate-800/60 backdrop-blur-md rounded-xl px-4 py-3 border border-slate-700/50 cursor-pointer overflow-hidden"
-            >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
-              />
-              <motion.div
-                animate={{ y: [0, -3, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="relative"
-              >
-                <MapPin className="w-6 h-6 text-teal-400" />
-              </motion.div>
-              <div className="relative">
-                <span className="text-xs text-slate-400 uppercase tracking-wider block">Destination</span>
-                <span className="text-white font-bold text-lg">Manila, Philippines</span>
+            <div className="flex items-center gap-2 bg-slate-800/60 backdrop-blur-md rounded-lg px-3 py-2 border border-slate-700/50">
+              <MapPin className="w-5 h-5 text-teal-400" />
+              <div>
+                <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Destination</span>
+                <span className="text-white font-bold text-sm">Manila, Philippines</span>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
 
-          {/* Enhanced CTA Button with multiple effects */}
+          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="relative inline-block"
           >
-            {/* Animated rings behind button */}
-            <motion.div
-              className="absolute inset-0 -m-4 rounded-2xl border-2 border-teal-500/30"
-              animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <motion.div
-              className="absolute inset-0 -m-8 rounded-3xl border border-teal-500/20"
-              animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0, 0.3] }}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-            />
-            
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+            <Button 
+              onClick={scrollToSupport}
+              size="lg"
+              className="bg-gradient-to-r from-teal-500 via-teal-600 to-cyan-600 hover:from-teal-400 hover:via-teal-500 hover:to-cyan-500 text-white font-bold px-6 py-4 text-sm rounded-xl shadow-xl shadow-teal-500/30"
             >
-              <Button 
-                onClick={scrollToSupport}
-                size="lg"
-                className="relative bg-gradient-to-r from-teal-500 via-teal-600 to-cyan-600 hover:from-teal-400 hover:via-teal-500 hover:to-cyan-500 text-white font-bold px-8 py-5 text-base rounded-xl shadow-2xl shadow-teal-500/30 transition-all duration-300 overflow-hidden group"
-              >
-                {/* Button shine effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full"
-                  animate={{ translateX: ['-100%', '100%'] }}
-                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                />
-                <motion.div
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                  className="mr-3"
-                >
-                  <Heart className="w-5 h-5" fill="currentColor" />
-                </motion.div>
-                <span className="relative z-10">Support My Journey</span>
-              </Button>
-            </motion.div>
+              <Heart className="w-4 h-4 mr-2" fill="currentColor" />
+              Support My Journey
+            </Button>
           </motion.div>
 
-          {/* Scroll indicator - positioned above the wave */}
+          {/* Scroll indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="mt-6 flex flex-col items-center gap-2"
+            className="mt-4 flex flex-col items-center gap-1"
           >
-            <span className="text-xs text-slate-400 uppercase tracking-widest">Scroll</span>
+            <span className="text-[10px] text-slate-400 uppercase tracking-widest">Scroll</span>
             <motion.div
-              className="w-6 h-10 rounded-full border-2 border-slate-500 flex justify-center pt-2"
+              className="w-5 h-8 rounded-full border-2 border-slate-500 flex justify-center pt-1.5"
             >
               <motion.div
-                animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
+                animate={{ y: [0, 10, 0], opacity: [1, 0.3, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-1.5 h-1.5 bg-teal-400 rounded-full"
+                className="w-1 h-1 bg-teal-400 rounded-full"
               />
             </motion.div>
           </motion.div>
