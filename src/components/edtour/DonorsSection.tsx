@@ -23,6 +23,7 @@ export function DonorsSection() {
     { rank: 8, name: 'KE**N JO*N A.', amount: 10, icon: Star, color: 'from-green-400 to-green-500' },
     { rank: 9, name: 'RO***T JH*N A.', amount: 5, icon: Star, color: 'from-red-400 to-red-500' },
     { rank: 10, name: 'LO**E J** M.', amount: 1, icon: Star, color: 'from-blue-400 to-blue-500' },
+    { rank: 10, name: 'LO**E J** M.', amount: 1, icon: Star, color: 'from-blue-400 to-blue-500' },
   ]
 
   const totalRaised = topDonors.reduce((sum, donor) => sum + donor.amount, 0)
