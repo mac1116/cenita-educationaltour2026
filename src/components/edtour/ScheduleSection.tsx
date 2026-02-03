@@ -104,8 +104,8 @@ export function ScheduleSection() {
               <motion.div whileHover={{ y: -8 }} className="h-full">
                 <Card className="h-full flex flex-col overflow-hidden hover:shadow-xl transition-all duration-300 bg-card border border-border">
 
-                  {/* Day Header */}
-                  <div className={`bg-gradient-to-r ${day.color} p-6 text-white relative overflow-hidden`}>
+                  {/* Day Header - Fixed height for alignment */}
+                  <div className={`bg-gradient-to-r ${day.color} p-6 text-white relative overflow-hidden h-[160px]`}>
                     <motion.div
                       className="absolute -right-4 -top-4 w-20 h-20 bg-white/10 rounded-full"
                       animate={{ scale: [1, 1.2, 1] }}

@@ -28,7 +28,7 @@ export function HeroSection() {
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 
@@ -139,20 +139,20 @@ export function HeroSection() {
       {/* Radial spotlight effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(15,23,42,0.4)_70%)]" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 pt-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Animated sparkle above badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
-            className="flex justify-center mb-4"
+            className="flex justify-center mb-2"
           >
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             >
-              <Sparkles className="w-8 h-8 text-amber-400" />
+              <Sparkles className="w-6 h-6 text-amber-400" />
             </motion.div>
           </motion.div>
 
@@ -161,14 +161,14 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative inline-flex items-center gap-2 mb-8"
+            className="relative inline-flex items-center gap-2 mb-4"
           >
             <motion.div
               className="absolute inset-0 bg-teal-500/20 rounded-xl blur-xl"
               animate={{ opacity: [0.5, 0.8, 0.5], scale: [1, 1.1, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            <div className="relative inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-5 py-3">
+            <div className="relative inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2">
               <motion.div
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -184,7 +184,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-tight mb-6 tracking-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4 tracking-tight"
           >
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -215,7 +215,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-6 leading-relaxed"
           >
             I'm seeking financial support for an educational tour to Manila's top tech companies—an opportunity to learn from industry professionals and prepare for my future career in Computer Science.
           </motion.p>
@@ -225,12 +225,12 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="flex flex-wrap justify-center gap-3 mb-6"
           >
             <motion.div 
               whileHover={{ scale: 1.08, y: -3 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative flex items-center gap-3 bg-slate-800/60 backdrop-blur-md rounded-xl px-6 py-4 border border-slate-700/50 cursor-pointer overflow-hidden"
+              className="group relative flex items-center gap-2 bg-slate-800/60 backdrop-blur-md rounded-xl px-4 py-3 border border-slate-700/50 cursor-pointer overflow-hidden"
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
@@ -251,7 +251,7 @@ export function HeroSection() {
             <motion.div 
               whileHover={{ scale: 1.08, y: -3 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative flex items-center gap-3 bg-slate-800/60 backdrop-blur-md rounded-xl px-6 py-4 border border-slate-700/50 cursor-pointer overflow-hidden"
+              className="group relative flex items-center gap-2 bg-slate-800/60 backdrop-blur-md rounded-xl px-4 py-3 border border-slate-700/50 cursor-pointer overflow-hidden"
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
@@ -296,7 +296,7 @@ export function HeroSection() {
               <Button 
                 onClick={scrollToSupport}
                 size="lg"
-                className="relative bg-gradient-to-r from-teal-500 via-teal-600 to-cyan-600 hover:from-teal-400 hover:via-teal-500 hover:to-cyan-500 text-white font-bold px-12 py-7 text-lg rounded-xl shadow-2xl shadow-teal-500/30 transition-all duration-300 overflow-hidden group"
+                className="relative bg-gradient-to-r from-teal-500 via-teal-600 to-cyan-600 hover:from-teal-400 hover:via-teal-500 hover:to-cyan-500 text-white font-bold px-8 py-5 text-base rounded-xl shadow-2xl shadow-teal-500/30 transition-all duration-300 overflow-hidden group"
               >
                 {/* Button shine effect */}
                 <motion.div
@@ -309,60 +309,44 @@ export function HeroSection() {
                   transition={{ duration: 1.5, repeat: Infinity }}
                   className="mr-3"
                 >
-                  <Heart className="w-6 h-6" fill="currentColor" />
+                  <Heart className="w-5 h-5" fill="currentColor" />
                 </motion.div>
                 <span className="relative z-10">Support My Journey</span>
               </Button>
             </motion.div>
           </motion.div>
 
-          {/* Scroll indicator */}
+          {/* Scroll indicator - positioned above the wave */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="mt-16"
+            className="mt-6 flex flex-col items-center gap-2"
           >
+            <span className="text-xs text-slate-400 uppercase tracking-widest">Scroll</span>
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="flex flex-col items-center gap-2 text-slate-400"
+              className="w-6 h-10 rounded-full border-2 border-slate-500 flex justify-center pt-2"
             >
-              <span className="text-xs uppercase tracking-widest">Scroll to explore</span>
               <motion.div
-                className="w-6 h-10 rounded-full border-2 border-slate-500 flex justify-center pt-2"
-              >
-                <motion.div
-                  animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                  className="w-1.5 h-1.5 bg-teal-400 rounded-full"
-                />
-              </motion.div>
+                animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="w-1.5 h-1.5 bg-teal-400 rounded-full"
+              />
             </motion.div>
           </motion.div>
         </div>
       </div>
 
-      {/* Wavy curve divider */}
+      {/* Static wavy curve divider */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0]">
         <svg 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none" 
-          className="relative block w-full h-[80px] md:h-[140px]"
+          className="relative block w-full h-[80px] md:h-[120px]"
         >
-          <motion.path 
-            d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" 
+          <path 
+            d="M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z" 
             className="fill-background"
-            initial={{ d: "M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" }}
-            animate={{ 
-              d: [
-                "M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z",
-                "M0,0 C300,120 900,80 1200,0 L1200,120 L0,120 Z",
-                "M0,0 C300,80 900,120 1200,0 L1200,120 L0,120 Z",
-                "M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z",
-              ]
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
         </svg>
       </div>
