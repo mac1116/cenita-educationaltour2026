@@ -316,13 +316,14 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Scroll indicator - icon only */}
+          {/* Scroll indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="mt-16 flex justify-center"
+            className="mt-16 flex flex-col items-center gap-2"
           >
+            <span className="text-xs text-slate-400 uppercase tracking-widest">Scroll</span>
             <motion.div
               className="w-6 h-10 rounded-full border-2 border-slate-500 flex justify-center pt-2"
             >
