@@ -75,7 +75,7 @@ export function DonorsSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Card className="max-w-3xl mx-auto mb-16 p-8 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/50 dark:to-slate-800/50 border border-border">
+          <Card className="max-w-3xl mx-auto mb-16 p-8 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/50 dark:to-slate-800/50 border border-border shadow-lg shadow-primary/5">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <motion.div 
@@ -86,8 +86,8 @@ export function DonorsSection() {
                   <Target className="w-6 h-6 text-white" />
                 </motion.div>
                 <div>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide font-medium">Fundraising Goal</p>
-                  <p className="text-2xl font-black text-foreground">₱{goal.toLocaleString()}</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide font-medium">Total Raised</p>
+                  <p className="text-3xl font-black text-primary">₱{animatedTotal.toLocaleString()}</p>
                 </div>
               </div>
               <div className="text-right">
@@ -95,7 +95,7 @@ export function DonorsSection() {
                   <TrendingUp className="w-5 h-5" />
                   <span className="font-bold">{animatedPercentage.toFixed(1)}%</span>
                 </div>
-                <p className="text-sm text-muted-foreground">of goal reached</p>
+                <p className="text-sm text-muted-foreground">of ₱{goal.toLocaleString()} goal</p>
               </div>
             </div>
 
@@ -128,12 +128,10 @@ export function DonorsSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <Card className="max-w-2xl mx-auto overflow-hidden bg-card border border-border">
-            <div className="bg-gradient-to-r from-amber-500 to-amber-600 p-4 text-white text-center">
-              <h3 className="text-xl font-bold flex items-center justify-center gap-2 tracking-tight">
-                <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 2 }}>
-                  <Trophy className="w-6 h-6" />
-                </motion.div>
+          <Card className="max-w-2xl mx-auto overflow-hidden bg-card border border-border shadow-lg shadow-amber-500/5">
+            <div className="bg-gradient-to-r from-amber-500 to-amber-600 p-5 text-white text-center">
+              <h3 className="text-xl font-semibold flex items-center justify-center gap-3 tracking-tight">
+                <Trophy className="w-6 h-6" />
                 Leaderboard
               </h3>
             </div>
