@@ -3,6 +3,7 @@
 import { Calendar, MapPin, GraduationCap, Heart, Sparkles, Rocket, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
+import profilePic from '@/assets/mac.jpg'
 
 export function HeroSection() {
   const scrollToSupport = () => {
@@ -155,7 +156,7 @@ export function HeroSection() {
                 transition={{ duration: 2, repeat: Infinity }}
               />
               <img 
-                src="/placeholder.svg" 
+                src={profilePic}
                 alt="Profile"
                 className="relative w-16 h-16 rounded-full border-2 border-teal-400/50 object-cover bg-slate-700"
               />
@@ -169,7 +170,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-white font-semibold text-base mb-1"
           >
-            Your Name Here
+            Mheil Andrei N. Cenita
           </motion.p>
 
           {/* Badge with glow effect */}
