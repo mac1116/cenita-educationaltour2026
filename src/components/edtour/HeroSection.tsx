@@ -316,12 +316,12 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Scroll indicator */}
+          {/* Scroll indicator - positioned above the wave */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="mt-16 flex flex-col items-center gap-2"
+            className="mt-16 mb-24 flex flex-col items-center gap-2"
           >
             <span className="text-xs text-slate-400 uppercase tracking-widest">Scroll</span>
             <motion.div
@@ -337,26 +337,16 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Wavy curve divider */}
+      {/* Static wavy curve divider */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0]">
         <svg 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none" 
-          className="relative block w-full h-[80px] md:h-[140px]"
+          className="relative block w-full h-[80px] md:h-[120px]"
         >
-          <motion.path 
-            d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" 
+          <path 
+            d="M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z" 
             className="fill-background"
-            initial={{ d: "M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" }}
-            animate={{ 
-              d: [
-                "M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z",
-                "M0,0 C300,120 900,80 1200,0 L1200,120 L0,120 Z",
-                "M0,0 C300,80 900,120 1200,0 L1200,120 L0,120 Z",
-                "M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z",
-              ]
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
         </svg>
       </div>
