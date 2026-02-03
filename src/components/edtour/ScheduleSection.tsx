@@ -104,8 +104,8 @@ export function ScheduleSection() {
               <motion.div whileHover={{ y: -8 }} className="h-full">
                 <Card className="h-full flex flex-col overflow-hidden hover:shadow-xl transition-all duration-300 bg-card border border-border">
 
-                  {/* Day Header */}
-                  <div className={`bg-gradient-to-r ${day.color} p-6 text-white relative overflow-hidden`}>
+                  {/* Day Header - Fixed height for alignment */}
+                  <div className={`bg-gradient-to-r ${day.color} p-6 text-white relative overflow-hidden min-h-[140px] flex flex-col justify-center`}>
                     <motion.div
                       className="absolute -right-4 -top-4 w-20 h-20 bg-white/10 rounded-full"
                       animate={{ scale: [1, 1.2, 1] }}
@@ -113,7 +113,7 @@ export function ScheduleSection() {
                     />
                     <p className="text-white/80 text-sm font-semibold uppercase tracking-wide">Day {day.day}</p>
                     <p className="font-bold">{day.date}</p>
-                    <h3 className="text-lg font-bold mt-2">{day.title}</h3>
+                    <h3 className="text-lg font-bold mt-2 line-clamp-2">{day.title}</h3>
                   </div>
 
                   {/* Activities */}
