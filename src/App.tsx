@@ -1,4 +1,5 @@
 import { HeroSection } from './components/edtour/HeroSection'
+import { BackgroundEffects } from './components/edtour/BackgroundEffects'
 import { AboutSection } from './components/edtour/AboutSection'
 import { StudentProfile } from './components/edtour/StudentProfile'
 import CountdownTimerAltAnimation from './components/edtour/CountdownTimerAltAnimation'
@@ -38,6 +39,7 @@ export default function App() {
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:32px_32px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)] opacity-30" />
       </div>
 
+      <BackgroundEffects />
       <main className="relative z-0" role="main">
         <HeroSection />
         <div className="relative">
