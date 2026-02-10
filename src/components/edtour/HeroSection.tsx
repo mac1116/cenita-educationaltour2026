@@ -11,13 +11,13 @@ export function HeroSection() {
   }
 
   // Floating particles configuration
-  const particles = Array.from({ length: 20 }, (_, i) => ({
+  const particles = Array.from({ length: 40 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
-    size: Math.random() * 4 + 2,
-    duration: Math.random() * 3 + 4,
-    delay: Math.random() * 2,
+    size: Math.random() * 5 + 2,
+    duration: Math.random() * 4 + 3,
+    delay: Math.random() * 3,
   }))
 
   // Floating icons configuration
@@ -26,7 +26,20 @@ export function HeroSection() {
     { Icon: Star, x: '85%', y: '15%', delay: 0.5, rotate: -15 },
     { Icon: Sparkles, x: '15%', y: '70%', delay: 1, rotate: 20 },
     { Icon: GraduationCap, x: '80%', y: '65%', delay: 1.5, rotate: -10 },
+    { Icon: Star, x: '5%', y: '45%', delay: 2, rotate: 30 },
+    { Icon: Sparkles, x: '90%', y: '40%', delay: 0.8, rotate: -20 },
+    { Icon: Rocket, x: '70%', y: '80%', delay: 1.2, rotate: 15 },
+    { Icon: GraduationCap, x: '25%', y: '85%', delay: 2.5, rotate: -5 },
   ]
+
+  // Shooting stars
+  const shootingStars = Array.from({ length: 5 }, (_, i) => ({
+    id: i,
+    delay: i * 3 + Math.random() * 2,
+    duration: 1.5 + Math.random(),
+    top: Math.random() * 60,
+    left: Math.random() * 40,
+  }))
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950">
@@ -76,7 +89,7 @@ export function HeroSection() {
         {particles.map((particle) => (
           <motion.div
             key={particle.id}
-            className="absolute rounded-full bg-white/30"
+            className={`absolute rounded-full ${particle.size > 5 ? 'bg-teal-400/40' : 'bg-white/30'}`}
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
@@ -95,6 +108,30 @@ export function HeroSection() {
               ease: "easeInOut",
             }}
           />
+        ))}
+      </div>
+
+      {/* Shooting stars */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {shootingStars.map((star) => (
+          <motion.div
+            key={`star-${star.id}`}
+            className="absolute w-[2px] h-[2px] bg-white rounded-full"
+            style={{ top: `${star.top}%`, left: `${star.left}%` }}
+            animate={{
+              x: [0, 300],
+              y: [0, 150],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: star.duration,
+              repeat: Infinity,
+              delay: star.delay,
+              repeatDelay: 4,
+            }}
+          >
+            <div className="absolute top-0 right-0 w-20 h-[1px] bg-gradient-to-l from-white/80 to-transparent" />
+          </motion.div>
         ))}
       </div>
 
