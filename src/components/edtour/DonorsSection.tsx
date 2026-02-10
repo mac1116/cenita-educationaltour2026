@@ -1,6 +1,6 @@
 'use client'
 
-import { Trophy, Medal, Award, Star, TrendingUp, Target } from 'lucide-react'
+import { Trophy, Medal, Award, TrendingUp, Target } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { motion, useInView } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
@@ -12,20 +12,28 @@ export function DonorsSection() {
   const [animatedPercentage, setAnimatedPercentage] = useState(0)
 
   const topDonors = [
-    { rank: 1, name: 'Bank Transfer from Coins.ph (DCPay) with account ending in 1**7.', amount: 5209, icon: Trophy, color: 'from-yellow-400 to-amber-500' },
-    { rank: 2, name: 'Bank Transfer from Philippine National Bank (PNB) with account ending in 8**5', amount: 1000, icon: Medal, color: 'from-gray-300 to-gray-400' },
-    { rank: 2, name: 'Bank Transfer from BPI/VIBE by BPI with account ending in 8**6', amount: 1000, icon: Award, color: 'from-amber-300 to-amber-400' },
-    { rank: 2, name: 'K******Y  S.', amount: 1000, icon: Star, color: 'from-red-600 to-red-700' },
-    { rank: 2, name: 'N****N L***Z', amount: 1000, icon: Star, color: 'from-purple-400 to-purple-500' },
-    { rank: 3, name: 'M** GI*A O', amount: 800, icon: Star, color: 'from-blue-400 to-blue-500' },
-    { rank: 4, name: 'SU****E G.', amount: 500, icon: Star, color: 'from-green-400 to-green-500' },
-    { rank: 4, name: 'R****N A**B', amount: 500, icon: Star, color: 'from-teal-400 to-teal-500' },
-    { rank: 5, name: 'Bank Transfer from BDO Unibank Inc. with account ending in 2**8', amount: 350, icon: Star, color: 'from-red-400 to-red-500' },
-    { rank: 6, name: 'B********A C******N', amount: 200, icon: Star, color: 'from-blue-400 to-blue-500' },
-    { rank: 7, name: 'KE**N JO*N A.', amount: 10, icon: Star, color: 'from-green-400 to-green-500' },
-    { rank: 8, name: 'RO***T JH*N A.', amount: 5, icon: Star, color: 'from-red-400 to-red-500' },
-    { rank: 9, name: 'LO**E J** M.', amount: 1, icon: Star, color: 'from-blue-400 to-blue-500' },
+    { rank: 1, name: 'Bank Transfer from Coins.ph (DCPay) with account ending in 1**7.', amount: 5209 },
+    { rank: 2, name: 'Bank Transfer from Philippine National Bank (PNB) with account ending in 8**5', amount: 1000 },
+    { rank: 2, name: 'Bank Transfer from BPI/VIBE by BPI with account ending in 8**6', amount: 1000 },
+    { rank: 2, name: 'K******Y  S.', amount: 1000 },
+    { rank: 2, name: 'N****N L***Z', amount: 1000 },
+    { rank: 3, name: 'M** GI*A O', amount: 800 },
+    { rank: 4, name: 'SU****E G.', amount: 500 },
+    { rank: 4, name: 'R****N A**B', amount: 500 },
+    { rank: 5, name: 'Bank Transfer from BDO Unibank Inc. with account ending in 2**8', amount: 350 },
+    { rank: 6, name: 'B********A C******N', amount: 200 },
+    { rank: 7, name: 'KE**N JO*N A.', amount: 10 },
+    { rank: 8, name: 'RO***T JH*N A.', amount: 5 },
+    { rank: 9, name: 'LO**E J** M.', amount: 1 },
   ]
+
+  const getRankStyle = (rank: number) => {
+    if (rank === 1) return 'from-yellow-400 to-amber-500'
+    if (rank === 2) return 'from-gray-300 to-gray-400'
+    if (rank === 3) return 'from-amber-600 to-amber-700'
+    const colors = ['from-slate-500 to-slate-600', 'from-blue-500 to-blue-600', 'from-teal-500 to-teal-600', 'from-indigo-500 to-indigo-600', 'from-emerald-500 to-emerald-600', 'from-violet-500 to-violet-600']
+    return colors[(rank - 4) % colors.length]
+  }
 
   const totalRaised = topDonors.reduce((sum, donor) => sum + donor.amount, 0)
   const goal = 24800
@@ -154,10 +162,14 @@ export function DonorsSection() {
                   {/* Rank */}
                   <motion.div 
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className={`w-10 h-10 rounded-lg bg-gradient-to-br ${donor.color} flex items-center justify-center shadow-lg`}
+                    className={`w-10 h-10 rounded-lg bg-gradient-to-br ${getRankStyle(donor.rank)} flex items-center justify-center shadow-lg`}
                   >
-                    {donor.rank <= 3 ? (
-                      <donor.icon className="w-5 h-5 text-white" />
+                    {donor.rank === 1 ? (
+                      <Trophy className="w-5 h-5 text-white" />
+                    ) : donor.rank === 2 ? (
+                      <Medal className="w-5 h-5 text-white" />
+                    ) : donor.rank === 3 ? (
+                      <Award className="w-5 h-5 text-white" />
                     ) : (
                       <span className="text-white font-bold">{donor.rank}</span>
                     )}
