@@ -13,10 +13,10 @@ export function DonorsSection() {
 
   const topDonors = [
     { rank: 1, name: 'Bank Transfer from Coins.ph (DCPay) with account ending in 1**7.', amount: 5209 },
-    { rank: 2, name: 'Bank Transfer from Philippine National Bank (PNB) with account ending in 8**5', amount: 1000 },
-    { rank: 3, name: 'N****N L***Z', amount: 1000 },
-    { rank: 4, name: 'Bank Transfer from BPI/VIBE by BPI with account ending in 8**6', amount: 1000 },
-    { rank: 5, name: 'H***Y A**D', amount: 3000 },
+    { rank: 2, name: 'H***Y A**D', amount: 3000 },
+    { rank: 3, name: 'Bank Transfer from Philippine National Bank (PNB) with account ending in 8**5', amount: 1000 },
+    { rank: 4, name: 'N****N L***Z', amount: 1000 },
+    { rank: 5, name: 'Bank Transfer from BPI/VIBE by BPI with account ending in 8**6', amount: 1000 },
     { rank: 6, name: 'K******Y  S.', amount: 1000 },
     { rank: 7, name: 'M** GI*A O', amount: 800 },
     { rank: 8, name: 'SU****E G.', amount: 500 },
