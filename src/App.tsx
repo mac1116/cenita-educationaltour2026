@@ -45,7 +45,7 @@ export default function App() {
 
         {/* Rescheduled Notice Banner */}
         <div className="bg-amber-500/10 border-y border-amber-500/30 py-4">
-          <div className="container mx-auto px-6 flex items-center justify-center gap-3 text-center">
+          <div className="container mx-auto px-6 flex flex-col items-center justify-center gap-2 text-center">
             <span className="inline-flex items-center gap-2 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider animate-pulse">
               UPDATE
             </span>
