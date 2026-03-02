@@ -47,7 +47,7 @@ export default function App() {
         <div className="bg-amber-500/10 border-y border-amber-500/30 py-4">
           <div className="container mx-auto px-6 flex items-center justify-center gap-3 text-center">
             <span className="inline-flex items-center gap-2 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider animate-pulse">
-              Update
+              UPDATE
             </span>
             <p className="text-sm sm:text-base font-semibold text-foreground">
               The Educational Tour has been <span className="text-amber-600 font-black">rescheduled</span> from March 3-6 to{' '}
