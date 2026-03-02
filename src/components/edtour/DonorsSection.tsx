@@ -12,21 +12,22 @@ export function DonorsSection() {
   const [animatedPercentage, setAnimatedPercentage] = useState(0)
 
   const topDonors = [
-    { rank: 1, name: 'Bank Transfer from Coins.ph (DCPay) with account ending in 1**7.', amount: 5209 },
-    { rank: 2, name: 'H***Y A**D', amount: 2000 },
-    { rank: 3, name: 'Bank Transfer from Philippine National Bank (PNB) with account ending in 8**5', amount: 1000 },
-    { rank: 4, name: 'N****N L***Z', amount: 1000 },
-    { rank: 5, name: 'Bank Transfer from BPI/VIBE by BPI with account ending in 8**6', amount: 1000 },
-    { rank: 6, name: 'K******Y  S.', amount: 1000 },
-    { rank: 7, name: 'M** GI*A O', amount: 800 },
-    { rank: 8, name: 'SU****E G.', amount: 500 },
-    { rank: 9, name: 'R****N A**B', amount: 500 },
-    { rank: 10, name: 'A******E M.', amount: 500 },
-    { rank: 11, name: 'Bank Transfer from BDO Unibank Inc. with account ending in 2**8', amount: 350 },
-    { rank: 12, name: 'B********A C******N', amount: 200 },
-    { rank: 13, name: 'KE**N JO*N A.', amount: 10 },
-    { rank: 14, name: 'RO***T JH*N A.', amount: 5 },
-    { rank: 15, name: 'LO**E J** M.', amount: 1 },
+    { rank: 1, name: 'Bank Transfer from BDO with account ending in 5**7', amount: 6000 },
+    { rank: 2, name: 'Bank Transfer from Coins.ph (DCPay) with account ending in 1**7.', amount: 5209 },
+    { rank: 3, name: 'H***Y A**D', amount: 2000 },
+    { rank: 4, name: 'Bank Transfer from Philippine National Bank (PNB) with account ending in 8**5', amount: 1000 },
+    { rank: 5, name: 'N****N L***Z', amount: 1000 },
+    { rank: 6, name: 'Bank Transfer from BPI/VIBE by BPI with account ending in 8**6', amount: 1000 },
+    { rank: 7, name: 'K******Y  S.', amount: 1000 },
+    { rank: 8, name: 'M** GI*A O', amount: 800 },
+    { rank: 9, name: 'SU****E G.', amount: 500 },
+    { rank: 10, name: 'R****N A**B', amount: 500 },
+    { rank: 11, name: 'A******E M.', amount: 500 },
+    { rank: 12, name: 'Bank Transfer from BDO Unibank Inc. with account ending in 2**8', amount: 350 },
+    { rank: 13, name: 'B********A C******N', amount: 200 },
+    { rank: 14, name: 'KE**N JO*N A.', amount: 10 },
+    { rank: 15, name: 'RO***T JH*N A.', amount: 5 },
+    { rank: 16, name: 'LO**E J** M.', amount: 1 },
   ]
 
   const getRankStyle = (rank: number) => {
