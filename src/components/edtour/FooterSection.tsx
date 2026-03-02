@@ -39,7 +39,7 @@ export function FooterSection() {
 
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8">
             <Calendar className="w-4 h-4" />
-            <span>Educational Tour • March 3-6, 2026</span>
+            <span>Educational Tour • March 24-27, 2026</span>
           </div>
 
           {/* Divider */}
