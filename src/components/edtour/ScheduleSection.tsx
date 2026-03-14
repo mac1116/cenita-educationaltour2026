@@ -54,7 +54,7 @@ export function ScheduleSection() {
     },
     {
       day: 4,
-      date: 'March 27, 2026',
+      date: 'April 17, 2026',
       title: 'Departure and Farewell',
       color: 'from-cyan-700 to-cyan-800',
       activities: [
