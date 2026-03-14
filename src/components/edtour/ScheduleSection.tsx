@@ -12,7 +12,7 @@ export function ScheduleSection() {
   const schedule = [
     {
       day: 1,
-      date: 'March 24, 2026',
+      date: 'April 14, 2026',
       title: 'Arrival and Company Visits',
       color: 'from-teal-600 to-teal-700',
       activities: [
@@ -26,7 +26,7 @@ export function ScheduleSection() {
     },
     {
       day: 2,
-      date: 'March 25, 2026',
+      date: 'April 15, 2026',
       title: 'Tech Exploration & Cultural Immersion',
       color: 'from-slate-700 to-slate-800',
       activities: [
@@ -40,7 +40,7 @@ export function ScheduleSection() {
     },
     {
       day: 3,
-      date: 'March 26, 2026',
+      date: 'April 16, 2026',
       title: 'Fun and Learning Day',
       color: 'from-amber-600 to-amber-700',
       activities: [
@@ -54,7 +54,7 @@ export function ScheduleSection() {
     },
     {
       day: 4,
-      date: 'March 27, 2026',
+      date: 'April 17, 2026',
       title: 'Departure and Farewell',
       color: 'from-cyan-700 to-cyan-800',
       activities: [

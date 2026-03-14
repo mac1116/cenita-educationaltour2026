@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Calendar } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const FLIGHT_DATE = new Date("2026-03-24T00:00:00");
+const FLIGHT_DATE = new Date("2026-04-14T00:00:00");
 
 interface TimeLeft {
   days: number;
