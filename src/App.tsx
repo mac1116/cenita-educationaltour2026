@@ -51,7 +51,7 @@ export default function App() {
             </span>
             <p className="text-sm sm:text-base font-semibold text-foreground">
               The Educational Tour has been <span className="text-amber-600 font-black">rescheduled</span> to{' '}
-              <span className="text-amber-600 font-black">April 14-17, 2026</span> due to pending due diligence and airplane tickets sold out due to upcoming Holy Week.
+              <span className="text-amber-600 font-black">April 14–17, 2026</span> due to pending due diligence and limited airplane ticket availability caused by the upcoming Holy Week.
             </p>
           </div>
         </div>
