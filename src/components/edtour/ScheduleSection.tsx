@@ -12,7 +12,7 @@ export function ScheduleSection() {
   const schedule = [
     {
       day: 1,
-      date: 'March 24, 2026',
+      date: 'April 14, 2026',
       title: 'Arrival and Company Visits',
       color: 'from-teal-600 to-teal-700',
       activities: [
