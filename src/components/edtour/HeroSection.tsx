@@ -271,7 +271,7 @@ export function HeroSection() {
               <Calendar className="w-5 h-5 text-amber-400" />
               <div>
                 <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Tour Date</span>
-                <span className="text-white font-bold text-sm">March 24-27, 2026</span>
+                <span className="text-white font-bold text-sm">April 14-17, 2026</span>
               </div>
             </div>
             
