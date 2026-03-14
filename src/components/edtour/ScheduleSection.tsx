@@ -26,7 +26,7 @@ export function ScheduleSection() {
     },
     {
       day: 2,
-      date: 'March 25, 2026',
+      date: 'April 15, 2026',
       title: 'Tech Exploration & Cultural Immersion',
       color: 'from-slate-700 to-slate-800',
       activities: [
