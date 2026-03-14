@@ -40,7 +40,7 @@ export function ScheduleSection() {
     },
     {
       day: 3,
-      date: 'March 26, 2026',
+      date: 'April 16, 2026',
       title: 'Fun and Learning Day',
       color: 'from-amber-600 to-amber-700',
       activities: [
